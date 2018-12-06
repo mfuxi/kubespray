@@ -211,7 +211,6 @@ Vagrant.configure("2") do |config|
          touch hosts && echo "[all]" >> hosts
          for i in $(seq 101 102); do
             echo "172.17.8.$i" >> hosts
-#            sshpass -f password.txt ssh-copy-id "172.17.8.$i"; 
          done
 	 echo [all:vars] >> hosts
 	 echo ansible_connection=ssh >> hosts
